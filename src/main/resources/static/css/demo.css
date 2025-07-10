@@ -1,0 +1,85 @@
+body {
+    background-color: #121212;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+h1, h2 {
+    color: greenyellow;
+    letter-spacing: 1px;
+}
+table {
+    border-collapse: collapse;
+    background-color: white;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #2E2E2E;
+    text-align: center;
+}
+
+form {
+  color: white;
+
+}
+
+.btn-primary {
+    background-color: transparent;
+    border: 2px solid #00ffe0;
+    color: #00ffe0;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #00ffe0;
+    color: #0d0d0d;
+    box-shadow: 0 0 5px #00ffe0, 0 0 5px #00ffe0;
+    border: 2px solid #00ffe0;
+}
+
+input[type = "submit"], input[type = "button"] {
+    background-color: white;
+}
+
+input[type = "submit"]:hover, input[type = "button"]:hover {
+    background-color: #00ffe0;
+    color: #0d0d0d;
+    box-shadow: 0 0 5px #00ffe0, 0 0 5px #00ffe0;
+    border: 2px solid #00ffe0;
+}
+
+input[type="text"] {
+    background-color: #1a1a1a;
+    border: 1px solid #00ffe0;
+    color: white;
+    padding: 8px 12px;
+}
+img {
+    width: 80%;
+    height: 400px;
+    display: block;
+    margin: 60px auto;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
