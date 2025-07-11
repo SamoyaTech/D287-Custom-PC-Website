@@ -1,5 +1,5 @@
 body {
-    background-color: #121212;
+    background-color: rgba(9, 9, 9, 0.97);
 }
 
 h1 {
@@ -28,6 +28,11 @@ form {
 
 }
 
+a .btn-primary {
+    display: block;
+    margin: 20px auto;
+}
+
 .btn-primary {
     background-color: transparent;
     border: 2px solid #00ffe0;
@@ -54,7 +59,7 @@ input[type = "submit"]:hover, input[type = "button"]:hover {
 }
 
 input[type="text"] {
-    background-color: #1a1a1a;
+    background-color: rgba(255, 255, 255, 0.09);
     border: 1px solid #00ffe0;
     color: white;
     padding: 8px 12px;
@@ -63,9 +68,20 @@ img {
     width: 80%;
     height: 400px;
     display: block;
-    margin: 60px auto;
+    margin: 30px auto;
     border-radius: 8px;
 }
+
+.info-box {
+    max-width: 40%;
+    margin: 60px auto;
+    font-size: 1.2rem;
+    color: black;
+    background-color: white;
+    padding: 20px;
+}
+
+
 
 
 
