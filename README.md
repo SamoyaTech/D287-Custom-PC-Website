@@ -15,7 +15,7 @@ Note: Do not remove any elements that were included in the screen. You may add a
 
 >mainscreen.html: line 13-linked demo.css
                  line 15-updated page title
-                 line 20-21- updated shop name and added image element
+                 line 20-21-updated shop name and added image element
                  line 45 and line 81-updated placeholder to "Name"
 demo.css, lines 1-68-added css styling to mainscreen.html
 
@@ -27,7 +27,8 @@ D.  Add an “About” page to the application to describe your chosen customer�
 
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
-
+>BootStrapData.java:line 32-35 added code for inhousePartRepository
+>                   line 45-148-added 5 parts and 5 products to inventory
 
 Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
 
