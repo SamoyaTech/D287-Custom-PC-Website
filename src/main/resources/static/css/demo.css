@@ -34,7 +34,7 @@ a .btn-primary {
 }
 
 .btn-primary {
-    background-color: transparent;
+    background-color:rgba(9, 9, 9, 0.97);
     border: 2px solid #00ffe0;
     color: #00ffe0;
     transition: 0.2s ease-in-out;
@@ -83,15 +83,10 @@ img {
 
 .cell {
     background-color: #80a6a6 !important;
+}
 
-
-
-
-
-
-
-
-
+.h1message{
+    color: white;
 }
 
 

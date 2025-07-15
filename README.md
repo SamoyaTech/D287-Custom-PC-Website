@@ -13,22 +13,23 @@ C.  Customize the HTML user interface for your customer’s application. The use
 
 Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.
 
->mainscreen.html: line 13-linked demo.css
+- mainscreen.html: line 13-linked demo.css
                  line 15-updated page title
                  line 20-21-updated shop name and added image element
                  line 45 and line 81-updated placeholder to "Name"
-demo.css, lines 1-68-added css styling to mainscreen.html
+- demo.css, lines 1-68-added css styling to mainscreen.html
 
 
 D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
->about.html: lines 1-27-added about.html with navigation to the main screen
-> mainscreen.html lines 21-23-added link to About page
->MainScreenController.java,lines 56-59, added "about" controller method to MainScreenController class
+- about.html: lines 1-27-added about.html with navigation to the main screen
+- mainscreen.html lines 21-23-added link to About page
+- MainScreenController.java,lines 56-59, added "about" controller method to MainScreenController class
 
 
 E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
->BootStrapData.java:line 32-35 added code for inhousePartRepository
->                   line 45-148-added 5 parts and 5 products to inventory
+- BootStrapData.java:line 32-35 added code for inhousePartRepository
+- line 45-148-added 5 parts and 5 products to inventory
+          
 
 Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
 
@@ -37,7 +38,13 @@ F.  Add a “Buy Now” button to your product list. Your “Buy Now” button m
 •  The “Buy Now” button must be next to the buttons that update and delete products.
 • The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
 •  Display a message that indicates the success or failure of a purchase.
-
+- AddProductController.java: line 176-201-created buyProduct method 
+                     with conditionals to check if product selected is in stock. If out of stock, 
+                      Failure.html displays and if in stock, Success.html displays and inventory
+                           decrements for a successful purchase.
+- mainscreen.html: line97-added "Buy Now" button
+- Failure.html: line 1-20-Failure.html created
+- Success.html:line 1-20-Success.html created
 
 G.  Modify the parts to track maximum and minimum inventory by doing the following:
 •  Add additional fields to the part entity for maximum and minimum inventory.
