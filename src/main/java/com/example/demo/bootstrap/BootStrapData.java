@@ -48,7 +48,9 @@ public class BootStrapData implements CommandLineRunner {
             o1.setCompanyName("Western Governors University");
             o1.setName("CPU");
             o1.setInv(20);
-            o1.setPrice(2000.0);
+            o1.setMinInv(1);
+            o1.setMaxInv(100);
+            o1.setPrice(1500.0);
             o1.setId(100L);
             outsourcedPartRepository.save(o1);
 
@@ -64,6 +66,8 @@ public class BootStrapData implements CommandLineRunner {
             o2.setCompanyName("Western Governors University");
             o2.setName("Motherboard");
             o2.setInv(50);
+            o2.setMinInv(1);
+            o2.setMaxInv(100);
             o2.setPrice(200.0);
             o2.setId(101L);
             outsourcedPartRepository.save(o2);
@@ -90,6 +94,8 @@ public class BootStrapData implements CommandLineRunner {
             //setting values
             i1.setName("RAM");
             i1.setInv(80);
+            i1.setMinInv(1);
+            i1.setMaxInv(100);
             i1.setPrice(100.0);
             i1.setId(200L);
             inhousePartRepository.save(i1);
@@ -103,6 +109,8 @@ public class BootStrapData implements CommandLineRunner {
             InhousePart i2 = new InhousePart();
             i2.setName("GPU");
             i2.setInv(50);
+            i2.setMinInv(1);
+            i2.setMaxInv(100);
             i2.setPrice(500.0);
             i2.setId(201L);
             inhousePartRepository.save(i2);
@@ -116,6 +124,8 @@ public class BootStrapData implements CommandLineRunner {
             InhousePart i3 = new InhousePart();
             i3.setName("SSD");
             i3.setInv(75);
+            i3.setMinInv(1);
+            i3.setMaxInv(100);
             i3.setPrice(70.0);
             i3.setId(202L);
             inhousePartRepository.save(i3);
