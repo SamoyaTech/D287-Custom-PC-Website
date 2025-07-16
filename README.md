@@ -72,7 +72,7 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
              
 *Mainscreen.html:*
 - line 43-44-added min and max inventory headers
-- line-added 55-56 min and max inventory rows
+- line 55-56-added min and max inventory rows
 
 •  Modify the sample inventory to include the maximum and minimum fields.
 
@@ -85,7 +85,7 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
 - line 28-37-added text inputs for min and max inventory
 
 - *OutsourcedPartForm.html:*
-- - line 32-38-added text inputs for min and max inventory
+- line 32-38-added text inputs for min and max inventory
 
 •  Rename the file the persistent storage is saved to.
 
@@ -114,9 +114,15 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
 
 H.  Add validation for between or at the maximum and minimum fields. The validation must include the following:
 •  Display error messages for low inventory when adding and updating parts if the inventory is less than the minimum number of parts.
-•  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
-•  Display error messages when adding and updating parts if the inventory is greater than the maximum.
+- completed in part G
 
+•  Display error messages for low inventory when adding and updating products lowers the part inventory below the minimum.
+
+*EnufPartsValidator.java:
+- line 36-40-modified isValid method and added code to display error message if adding/updating products lowers part inventory below the minimum
+
+•  Display error messages when adding and updating parts if the inventory is greater than the maximum.
+- completed in part G
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 

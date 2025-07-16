@@ -47,13 +47,11 @@
         </thead>
         <tbody>
         <tr th:each="tempPart : ${parts}">
-            <td class="cell"
-                th:text="${tempPart.name}">Name</td>
-            <td class="cell"
-                th:text="${tempPart.price}">1</td>
-            <td  class="cell" th:text="${tempPart.inv}">1</td>
-            <td  class="cell" th:text="${tempPart.minInv}">1</td>
-            <td  class="cell" th:text="${tempPart.maxInv}">1</td>
+            <td class="cell" th:text="${tempPart.name}">Name</td>
+            <td class="cell" th:text="${tempPart.price}">1</td>
+            <td class="cell" th:text="${tempPart.inv}">1</td>
+            <td class="cell" th:text="${tempPart.minInv}">1</td>
+            <td class="cell" th:text="${tempPart.maxInv}">1</td>
             <td class="cell"
              ><a th:href="@{/showPartFormForUpdate(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
                 <a th:href="@{/deletepart(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3"

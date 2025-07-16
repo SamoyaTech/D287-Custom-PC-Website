@@ -184,19 +184,17 @@ public class AddProductController {
         int inv = prodToBuy.getInv();
 
         //checking to see if inv value is 0
-        if (inv == 0) {
-            return "Failure"; //returning failure.html page
-        } else {
-            //reduce inv value by 1
-            inv = inv - 1;
+        if (inv == 0) return "Failure"; //returning failure.html page
 
-            // set new value of product inventory
-            prodToBuy.setInv(inv);
+        //reduce inv value by 1
+        inv = inv - 1;
 
-            //save product object with new inventory value
-            productService.save(prodToBuy);
+        // set new value of product inventory
+        prodToBuy.setInv(inv);
 
-            return "Success"; // returning success.html page
-        }
+        //save product object with new inventory value
+        productService.save(prodToBuy);
+
+        return "Success"; // returning success.html page
     }
 }

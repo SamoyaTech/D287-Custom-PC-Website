@@ -7,7 +7,7 @@ h1 {
     margin: 30px 0;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: greenyellow;
     letter-spacing: 1px;
 }
@@ -85,11 +85,13 @@ img {
     background-color: #80a6a6 !important;
 }
 
-.h1message{
+.h1message {
     color: white;
 }
 
-
+tr {
+   color:black;
+}
 
 
 
