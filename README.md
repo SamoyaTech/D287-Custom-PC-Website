@@ -6,20 +6,20 @@ The application allows users to view, add, modify, and delete inventory items—
 
 ### What It Does
 
-- **Inventory Management (CRUD)** — Add, view, update, and delete both parts and products 
+- **Inventory Management (CRUD)** - Add, view, update, and delete both parts and products 
   through a web interface backed by a relational database.
 - **Two Part Types** — Supports both in-house manufactured parts and outsourced parts, each 
   with their own form and validation rules.
-- **Min/Max Inventory Tracking** — Every part has a defined minimum and maximum inventory 
+- **Min/Max Inventory Tracking** - Every part has a defined minimum and maximum inventory 
   threshold. The system validates input in real time and blocks updates that would push 
   inventory outside that range, preventing invalid stock states.
-- **Product Assembly Logic** — Products are built from associated parts, with validation to 
+- **Product Assembly Logic** - Products are built from associated parts, with validation to 
   ensure enough part inventory exists before a product can be created or updated.
-- **Buy Now / Purchase Flow** — Customers can "purchase" a product directly from the main 
+- **Buy Now / Purchase Flow** - Customers can "purchase" a product directly from the main 
   inventory screen. Each purchase decrements product stock by one and displays a 
-  success/failure confirmation page depending on availability — without affecting the 
+  success/failure confirmation page depending on availability, without affecting the 
   inventory of the underlying parts.
-- **Sample Data on Startup** — The app seeds itself with 5 sample parts and 5 sample products 
+- **Sample Data on Startup** - The app seeds itself with 5 sample parts and 5 sample products 
   on first run, so the inventory is populated and ready to explore immediately with no 
   manual setup.
 
