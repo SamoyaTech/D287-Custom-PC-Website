@@ -1,10 +1,34 @@
-# WESTERN GOVERNORS UNIVERSITY 
-## D287 – JAVA FRAMEWORKS
+
 ## Project Overview
 
 This project is a full-stack inventory management system built with the Spring Framework (Java backend) and a simple HTML front-end. It’s designed for a fictional custom computer parts shop, simulating the operations of a modern PC customization business.
-The application allows users to view, add, modify, and delete inventory items—including both individual components (parts) and full PC builds (products)—while adhering to best practices in object-oriented design and modular architecture.
+The application allows users to view, add, modify, and delete inventory items—including both individual components (parts) and full PC builds (products), while adhering to best practices in object-oriented design and modular architecture.
 
+### What It Does
+
+- **Inventory Management (CRUD)** — Add, view, update, and delete both parts and products 
+  through a web interface backed by a relational database.
+- **Two Part Types** — Supports both in-house manufactured parts and outsourced parts, each 
+  with their own form and validation rules.
+- **Min/Max Inventory Tracking** — Every part has a defined minimum and maximum inventory 
+  threshold. The system validates input in real time and blocks updates that would push 
+  inventory outside that range, preventing invalid stock states.
+- **Product Assembly Logic** — Products are built from associated parts, with validation to 
+  ensure enough part inventory exists before a product can be created or updated.
+- **Buy Now / Purchase Flow** — Customers can "purchase" a product directly from the main 
+  inventory screen. Each purchase decrements product stock by one and displays a 
+  success/failure confirmation page depending on availability — without affecting the 
+  inventory of the underlying parts.
+- **Sample Data on Startup** — The app seeds itself with 5 sample parts and 5 sample products 
+  on first run, so the inventory is populated and ready to explore immediately with no 
+  manual setup.
+
+### Tech Stack
+
+- **Backend:** Java 17, Spring Boot, Spring Data JPA, Spring Validation
+- **Frontend:** Thymeleaf (server-rendered HTML), CSS
+- **Database:** H2 (embedded, file-based)
+- **Testing:** JUnit
 
 
 ### Code Changes made to each section:
@@ -135,3 +159,28 @@ J.  Remove the class files for any unused validators in order to clean your code
 
 
 K.  Demonstrate professional communication in the content and presentation of your submission.
+
+Here you go — copy everything between the lines below and paste directly into your GitHub README.md editor:
+markdown# WESTERN GOVERNORS UNIVERSITY
+
+
+## How to Run Locally
+
+### Prerequisites
+
+- **Java 17** installed ([download here](https://adoptium.net/) if needed)
+- Git (to clone the repo)
+- No need to install Maven separately — this project uses the Maven Wrapper (`mvnw`)
+
+### Steps
+
+1. Clone the repository
+```
+   git clone https://github.com/SamoyaTech/D287.git
+   
+   cd D287 
+```
+3. Open the project folder in IntelliJ and let IntelliJ finish indexing and downloading Maven dependencies.
+4. Open the main application class(`DemoApplication.java`) then click the Run button in the top toolbar
+5. Open the app in your browser
+http://localhost:8080
