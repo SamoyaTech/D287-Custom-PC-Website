@@ -1,8 +1,11 @@
 
 ## Project Overview
 
-This project is a full-stack inventory management system built with the Spring Framework (Java backend) and a simple HTML front-end. It’s designed for a fictional custom computer parts shop, simulating the operations of a modern PC customization business.
-The application allows users to view, add, modify, and delete inventory items—including both individual components (parts) and full PC builds (products), while adhering to best practices in object-oriented design and modular architecture.
+This project is a full‑stack inventory management system built with the Spring Framework (Java backend) and a lightweight HTML/Thymeleaf front‑end. The application is designed for a fictional custom computer parts shop and simulates the workflow of a modern PC customization business, allowing users to manage both individual components and complete PC builds through an intuitive interface.
+
+The system supports viewing, adding, editing, and deleting inventory items while following solid object‑oriented design principles and modular architecture. It demonstrates practical backend development, structured MVC patterns, and real‑world deployment using AWS Elastic Beanstalk.
+
+Live site: http://custompcshop-env.eba-apqgt6wx.us-east-2.elasticbeanstalk.com/
 
 ### What It Does
 
@@ -184,3 +187,45 @@ markdown# WESTERN GOVERNORS UNIVERSITY
 4. Open the main application class(`DemoApplication.java`) then click the Run button in the top toolbar
 5. Open the app in your browser
 http://localhost:8080
+
+## 🌐 Deployment Steps (AWS Elastic Beanstalk)
+
+This project is deployed using AWS Elastic Beanstalk on the Java Corretto 17 platform.  
+Below are the exact steps used to deploy the application.
+
+### 1. Configure Production Port
+Elastic Beanstalk requires Java applications to listen on port **5000**.  
+In `src/main/resources/application.properties`, add:
+
+server.port=5000
+
+![Step 1 - Port Configuration](screenshots/port.png)
+
+
+### 2. Build the Deployment JAR
+Inside IntelliJ:
+
+- Run **clean**
+- Run **package**
+
+This generates the deployment artifact:
+
+target/demo-0.0.1-SNAPSHOT.jar
+
+### Step 3 — Elastic Beanstalk Environment Setup
+![Step 3 - EB Environment Setup](screenshots/eb-form.png)
+
+### 4. Launch the Environment
+Click **Create** and wait for AWS to finish provisioning the EC2 instance and deploying the JAR.
+
+### 5. Access the Live Application
+Once deployment completes, open:
+
+http://custompcshop-env.eba-apqgt6wx.us-east-2.elasticbeanstalk.com/
+
+![Step 5 - EB Health OK](screenshots/step5-health.png)
+
+![Step 5 - Live Application](screenshots/liveapp1.png)
+
+[Step 5 - Live Application](screenshots/step5-liveapp2.png)
+
