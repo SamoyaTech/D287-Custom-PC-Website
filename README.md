@@ -1,10 +1,37 @@
-# WESTERN GOVERNORS UNIVERSITY 
-## D287 – JAVA FRAMEWORKS
+
 ## Project Overview
 
-This project is a full-stack inventory management system built with the Spring Framework (Java backend) and a simple HTML front-end. It’s designed for a fictional custom computer parts shop, simulating the operations of a modern PC customization business.
-The application allows users to view, add, modify, and delete inventory items—including both individual components (parts) and full PC builds (products)—while adhering to best practices in object-oriented design and modular architecture.
+This project is a full‑stack inventory management system built with the Spring Framework (Java backend) and a lightweight HTML/Thymeleaf front‑end. The application is designed for a fictional custom computer parts shop and simulates the workflow of a modern PC customization business, allowing users to manage both individual components and complete PC builds through an intuitive interface.
 
+The system supports viewing, adding, editing, and deleting inventory items while following solid object‑oriented design principles and modular architecture. It demonstrates practical backend development, structured MVC patterns, and real‑world deployment using AWS Elastic Beanstalk.
+
+Live site: http://custompcshop-env.eba-apqgt6wx.us-east-2.elasticbeanstalk.com/
+
+### What It Does
+
+- **Inventory Management (CRUD)** - Add, view, update, and delete both parts and products 
+  through a web interface backed by a relational database.
+- **Two Part Types** — Supports both in-house manufactured parts and outsourced parts, each 
+  with their own form and validation rules.
+- **Min/Max Inventory Tracking** - Every part has a defined minimum and maximum inventory 
+  threshold. The system validates input in real time and blocks updates that would push 
+  inventory outside that range, preventing invalid stock states.
+- **Product Assembly Logic** - Products are built from associated parts, with validation to 
+  ensure enough part inventory exists before a product can be created or updated.
+- **Buy Now / Purchase Flow** - Customers can "purchase" a product directly from the main 
+  inventory screen. Each purchase decrements product stock by one and displays a 
+  success/failure confirmation page depending on availability, without affecting the 
+  inventory of the underlying parts.
+- **Sample Data on Startup** - The app seeds itself with 5 sample parts and 5 sample products 
+  on first run, so the inventory is populated and ready to explore immediately with no 
+  manual setup.
+
+### Tech Stack
+
+- **Backend:** Java 17, Spring Boot, Spring Data JPA, Spring Validation
+- **Frontend:** Thymeleaf (server-rendered HTML), CSS
+- **Database:** H2 (embedded, file-based)
+- **Testing:** JUnit
 
 
 ### Code Changes made to each section:
@@ -135,3 +162,70 @@ J.  Remove the class files for any unused validators in order to clean your code
 
 
 K.  Demonstrate professional communication in the content and presentation of your submission.
+
+Here you go — copy everything between the lines below and paste directly into your GitHub README.md editor:
+markdown# WESTERN GOVERNORS UNIVERSITY
+
+
+## How to Run Locally
+
+### Prerequisites
+
+- **Java 17** installed ([download here](https://adoptium.net/) if needed)
+- Git (to clone the repo)
+- No need to install Maven separately — this project uses the Maven Wrapper (`mvnw`)
+
+### Steps
+
+1. Clone the repository
+```
+   git clone https://github.com/SamoyaTech/D287.git
+   
+   cd D287 
+```
+3. Open the project folder in IntelliJ and let IntelliJ finish indexing and downloading Maven dependencies.
+4. Open the main application class(`DemoApplication.java`) then click the Run button in the top toolbar
+5. Open the app in your browser
+http://localhost:8080
+
+## 🌐 Deployment Steps (AWS Elastic Beanstalk)
+
+This project is deployed using AWS Elastic Beanstalk on the Java Corretto 17 platform.  
+Below are the exact steps used to deploy the application.
+
+### 1. Configure Production Port
+Elastic Beanstalk requires Java applications to listen on port **5000**.  
+In `src/main/resources/application.properties`, add:
+
+server.port=5000
+
+![Step 1 - Port Configuration](screenshots/port.png)
+
+
+### 2. Build the Deployment JAR
+Inside IntelliJ:
+
+- Run **clean**
+- Run **package**
+
+This generates the deployment artifact:
+
+target/demo-0.0.1-SNAPSHOT.jar
+
+### Step 3 — Elastic Beanstalk Environment Setup
+![Step 3 - EB Environment Setup](screenshots/eb-form.png)
+
+### 4. Launch the Environment
+Click **Create** and wait for AWS to finish provisioning the EC2 instance and deploying the JAR.
+
+### 5. Access the Live Application
+Once deployment completes, open:
+
+http://custompcshop-env.eba-apqgt6wx.us-east-2.elasticbeanstalk.com/
+
+![Step 5 - EB Health OK](screenshots/step5-health.png)
+
+![Step 5 - Live Application](screenshots/liveapp1.png)
+
+[Step 5 - Live Application](screenshots/step5-liveapp2.png)
+
