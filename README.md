@@ -163,8 +163,6 @@ J.  Remove the class files for any unused validators in order to clean your code
 
 K.  Demonstrate professional communication in the content and presentation of your submission.
 
-Here you go — copy everything between the lines below and paste directly into your GitHub README.md editor:
-markdown# WESTERN GOVERNORS UNIVERSITY
 
 
 ## How to Run Locally
@@ -188,7 +186,7 @@ markdown# WESTERN GOVERNORS UNIVERSITY
 5. Open the app in your browser
 http://localhost:8080
 
-## 🌐 Deployment Steps (AWS Elastic Beanstalk)
+## Deployment Steps (AWS Elastic Beanstalk)
 
 This project is deployed using AWS Elastic Beanstalk on the Java Corretto 17 platform.  
 Below are the exact steps used to deploy the application.
@@ -218,14 +216,14 @@ target/demo-0.0.1-SNAPSHOT.jar
 ### 4. Launch the Environment
 Click **Create** and wait for AWS to finish provisioning the EC2 instance and deploying the JAR.
 
+![EB Health OK](screenshots/eb-health-ok.png)
+
 ### 5. Access the Live Application
 Once deployment completes, open:
 
 http://custompcshop-env.eba-apqgt6wx.us-east-2.elasticbeanstalk.com/
 
-![EB Health OK](screenshots/eb-health-ok.png)
-
 ![Live Application](screenshots/liveapp1.png)
 
-[Live Application](screenshots/liveapp2.png)
+![Live Application](screenshots/liveapp2.png)
 
