@@ -5,7 +5,7 @@ This project is a full‑stack inventory management system built with the Spring
 
 The system supports viewing, adding, editing, and deleting inventory items while following solid object‑oriented design principles and modular architecture. It demonstrates practical backend development, structured MVC patterns, and real‑world deployment using AWS Elastic Beanstalk.
 
-Live site: http://custompcshop-env.eba-apqgt6wx.us-east-2.elasticbeanstalk.com/
+AWS Deployment: http://custompcshop-env.eba-apqgt6wx.us-east-2.elasticbeanstalk.com/
 
 ### What It Does
 
@@ -199,7 +199,7 @@ In `src/main/resources/application.properties`, add:
 
 server.port=5000
 
-![Step 1 - Port Configuration](screenshots/port.png)
+![Port Configuration](screenshots/port.png)
 
 
 ### 2. Build the Deployment JAR
@@ -213,7 +213,7 @@ This generates the deployment artifact:
 target/demo-0.0.1-SNAPSHOT.jar
 
 ### Step 3 — Elastic Beanstalk Environment Setup
-![Step 3 - EB Environment Setup](screenshots/eb-form.png)
+![EB Environment Setup](screenshots/eb-form.png)
 
 ### 4. Launch the Environment
 Click **Create** and wait for AWS to finish provisioning the EC2 instance and deploying the JAR.
@@ -223,9 +223,9 @@ Once deployment completes, open:
 
 http://custompcshop-env.eba-apqgt6wx.us-east-2.elasticbeanstalk.com/
 
-![Step 5 - EB Health OK](screenshots/step5-health.png)
+![EB Health OK](screenshots/eb-health-ok.png)
 
-![Step 5 - Live Application](screenshots/liveapp1.png)
+![Live Application](screenshots/liveapp1.png)
 
-[Step 5 - Live Application](screenshots/step5-liveapp2.png)
+[Live Application](screenshots/liveapp2.png)
 
