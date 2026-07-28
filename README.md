@@ -18,10 +18,9 @@ AWS Deployment: http://custompcshop-env.eba-apqgt6wx.us-east-2.elasticbeanstalk.
   inventory outside that range, preventing invalid stock states.
 - **Product Assembly Logic** - Products are built from associated parts, with validation to 
   ensure enough part inventory exists before a product can be created or updated.
-- **Buy Now / Purchase Flow** - Customers can "purchase" a product directly from the main 
+- **Purchase Flow** - Customers can "purchase" a product directly from the main 
   inventory screen. Each purchase decrements product stock by one and displays a 
-  success/failure confirmation page depending on availability, without affecting the 
-  inventory of the underlying parts.
+  success/failure confirmation page depending on availability.
 - **Sample Data on Startup** - The app seeds itself with 5 sample parts and 5 sample products 
   on first run, so the inventory is populated and ready to explore immediately with no 
   manual setup.
